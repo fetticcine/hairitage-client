@@ -3,7 +3,7 @@ import React from 'react';
 import data from '../../data/messageData.json';
 import MessagesList from './MessagesList';
 
-class messageListContainer extends React.Component {
+class MessageListContainer extends React.Component {
     state = {
         data: []
     }
@@ -21,4 +21,4 @@ class messageListContainer extends React.Component {
     }
 }
 
-export default messageListContainer;
+export default MessageListContainer;
