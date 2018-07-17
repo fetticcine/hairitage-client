@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
-import PropTypes from 'prop-types';
-import CardSection from './common/CardSection';
-import colors from '../assets/colors';
 
-const UserRow = ({ image, senderName, msgPreviewText, timeStamp }) => {
+import PropTypes from 'prop-types';
+import colors from '../../assets/colors';
+
+const MessageRow = ({ image, senderName, msgPreviewText, timeStamp }) => {
   return (
-    <CardSection>
+    <View style={styles.rowCardStyle}>
       <View style={styles.rowContainerStyle}> 
        <View style={styles.iconNameContainerStyle}>
        {image}
@@ -17,11 +17,11 @@ const UserRow = ({ image, senderName, msgPreviewText, timeStamp }) => {
        </View>
         <Text style={styles.timeStampStyle}>{timeStamp}</Text>
       </View>
-    </CardSection>
+    </View>
   );
 }
 
-UserRow.propTypes = {
+MessageRow.propTypes = {
   senderName: PropTypes.string.isRequired,
   msgPreviewText: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
@@ -29,6 +29,15 @@ UserRow.propTypes = {
 };
 
 const styles = {
+  rowCardStyle: {
+    borderBottomWidth: 1,
+    padding: 5,
+    backgroundColor: '#fff',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    borderColor: '#ddd',
+    position: 'relative'
+  },
   rowContainerStyle: {
     justifyContent: 'space-between',
     flexDirection: 'row',
@@ -62,4 +71,4 @@ const styles = {
   },  
 };
 
-export default UserRow;
+export default MessageRow;

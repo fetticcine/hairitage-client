@@ -1,6 +1,6 @@
 import React from 'react';
 
-import data from '../data/messageData.json';
+import data from '../../data/messageData.json';
 import MessagesList from './MessagesList';
 
 class messageListContainer extends React.Component {
