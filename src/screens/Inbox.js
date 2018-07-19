@@ -1,13 +1,12 @@
 import React from 'react';
+import { View, Text } from 'react-native';
 
-import MessageListContainer from '../components/message/MessageListContainer';
-
-class Inbox extends React.Component {
+export default class Inbox extends React.Component {
   render() {
     return (
-      <MessageListContainer />
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Inbox Screen</Text>
+      </View>
     );
   }
 }
-
-export default Inbox;

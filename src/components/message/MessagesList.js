@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import MessageRow from '../message/MessageRow';
 
-
+// TODO: make styles dynamic
 const imageStyle = {
     height: 40,
     width: 40,

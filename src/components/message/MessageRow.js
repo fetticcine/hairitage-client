@@ -48,6 +48,7 @@ const styles = {
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
+  // TODO: make styles dynamic
   iconStyle: {
     height: 40,
     width: 40,
