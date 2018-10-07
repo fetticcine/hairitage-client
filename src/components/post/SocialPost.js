@@ -1,58 +1,57 @@
 import React, { Component } from 'react';
-import { ImageBackground, Text, View } from 'react-native';
+import { ImageBackground, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
+import { getGoogleDriveHostUrl } from '../../utils';
 import BaseButton from '../common/BaseButton';
 import CardSection from '../common/CardSection';
 import Card from '../common/Card';
 
+// TODO: put drive links in json file (or get it from somewhere instead of hardcoding it) when it exists
+const imageUrl = getGoogleDriveHostUrl('https://drive.google.com/file/d/1q-Gc5zBjSZvct45hAIkK4i-45r7D5Y9n/view?usp=sharing');
 class SocialPost extends Component {
+  state = { bookmark: false };
+
   render() {
     return (
-      <Card>
-        <CardSection>
-          <ImageBackground
-            style={{ width: '50%', height: '50%', justifyContent: 'flex-end', flex: 1 }}
-            source={{ uri: 'https://i.pinimg.com/originals/54/29/bf/5429bfb768b377574416144e7b0dede0.png' }}
-          >
-            <BaseButton
-            text="PROFILE"
-            />
-          </ImageBackground>
-        </CardSection>
+       <Card>
+          <CardSection>
+            <ImageBackground
+              style={{ width: '100%', height: 300, justifyContent: 'flex-end' }}
+              imageStyle={{ width: '100%', height:'100%' }}
+              source={{uri: imageUrl}}
+            >
+              <View style={{ flexDirection: 'row', marginLeft: 5, marginBottom: 5 }}>
+                <BaseButton
+                  // TODO: add functionality to the buttons when they're pressed.
+                  onPress={() => alert('Go to profile.')} 
+                  text="PROFILE"
+                  buttonAlign='flex-start'
+                />
+                <TouchableOpacity
+                  onPress={() => this.setState(prevState => ({ bookmark: !prevState.bookmark }))}
+                >
+                  <Icon 
+                  name={this.state.bookmark ? "bookmark" : "bookmark-border"} 
+                  size={30}
+                  color="#c4c4c4" 
+                  />
+                </TouchableOpacity>
+              </View>
+            </ImageBackground>
+          </CardSection>
 
-        <CardSection>
-          <BaseButton
-          text="View all comments"
-          />
-        </CardSection>
-      </Card>
+          <CardSection>
+            <BaseButton
+              // TODO: add functionality to the buttons when they're pressed.
+              onPress={() => alert('Comments list should render.')}
+              text="View all comments"
+              borderColor='transparent'
+            />
+          </CardSection>
+        </Card>   
     );
   }
 }
-
-// const styles = {
-//   // cardStyle: {
-//   //   borderWidth: 1,
-//   //   borderRadius: 2,
-//   //   borderColor: '#ddd',
-//   //   borderBottomWidth: 0,
-//   //   shadowColor: '#000',
-//   //   shadowOffset: { width: 0, height: 2 },
-//   //   shadowOpacity: 0.1,
-//   //   elevation: 2,                                          
-//   //   marginLeft: 5,
-//   //   marginRight: 5,
-//   //   marginTop: 10,
-//   // },
-//   // cardSectionStyle: {
-//   //   borderBottomWidth: 1,
-//   //   padding: 5,
-//   //   borderColor: '#ddd',
-//   //   backgroundColor: '#fff',
-//   //   justifyContent: 'center',
-//   //   flexDirection: 'row',
-//   //   position: 'relative'
-//   // },
-// }
 
 export default SocialPost;
