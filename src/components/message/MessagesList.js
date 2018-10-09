@@ -12,14 +12,13 @@ const imageStyle = {
     marginRight: 10
 };
 
+// TODO: look at socialPost to mirror passing image urls as props and use gdrive for image hosting
 class MessagesList extends React.Component {
     renderItem = ({item}) => {
         return (
         <MessageRow
             senderName={item.senderName}
             msgPreviewText={item.msgPreviewText}
-            // TODO: figure out way to use image links and not react nodes
-            // reason is b/c require takes in a string literal and is not dynamic
             image={<Image style={imageStyle} source={require('../../assets/fade.jpg')} />}
             timeStamp={item.timeStamp} 
         />
