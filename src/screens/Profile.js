@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import MyBarbers from '../components/profile/MyBarbers';
+
+import MyProfile from '../components/profile/MyProfile';
 
 export default class Profile extends React.Component {
   render() {
     return (
-      <MyBarbers />
+      <MyProfile />
     );
   }
 }
