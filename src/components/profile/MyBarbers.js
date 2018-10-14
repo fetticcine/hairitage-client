@@ -14,8 +14,6 @@ class MyBarbers extends Component {
 
         return (
             <View>
-                <ApptTicker />
-              
                 <View style={containerStyle}> 
                     <TouchableOpacity>
                         <Image style={imageStyle} source={{ uri: barberOneImage }} />

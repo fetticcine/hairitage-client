@@ -10,8 +10,6 @@ class MyCuts extends Component {
     render() {
         return (
             <View>
-                <ApptTicker />
-
                 <FlatList
                 data={[{}, {}, {}, {}]}
                 renderItem={() => <TouchableOpacity>

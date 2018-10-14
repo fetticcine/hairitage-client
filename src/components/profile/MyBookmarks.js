@@ -12,8 +12,6 @@ class MyBookmarks extends Component {
         
         return (
             <View>
-                <ApptTicker />
-
                 <FlatList
                 data={[{}, {}, {}, {}]}
                 renderItem={() => 
