@@ -6,6 +6,7 @@ import { getGoogleDriveHostUrl } from '../../utils';
 
 const galleryImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/1o-RfM-r7Rp0uuKR1gsUqic5g1tPYKUTs/view?usp=sharing');
 
+//TODO: create static json file for user data
 class MyBookmarks extends Component {
     render() {
         const { backgroundImageStyle, containerStyle, nameTextStyle } = styles;

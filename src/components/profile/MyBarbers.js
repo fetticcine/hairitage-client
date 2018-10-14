@@ -8,6 +8,7 @@ import ApptTicker from './ApptTicker';
 const barberOneImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/11FAcxF6wMBaHjtsyWl7d5hKqyN22t_Ds/view?usp=sharing');
 const barberTwoImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/1tzzXQdPG3qKJzWpttCLgVEqWoxnP_Z4L/view?usp=sharing');
 
+//TODO: create static json file for barber data
 class MyBarbers extends Component {
     render() {
         const { containerStyle, imageStyle, nameTextStyle, textStyle, buttonViewStyle } = styles;

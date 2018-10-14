@@ -6,6 +6,7 @@ import { getGoogleDriveHostUrl } from '../../utils';
 
 const barberImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/1REdU8QK8TqF9lX8yzqA4nzpa5NUZtETn/view?usp=sharing');
 
+//TODO: create static json file for appt data
 class ApptTicker extends Component {
     render() {
 
