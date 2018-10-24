@@ -11,28 +11,60 @@ import {
 const Home = createStackNavigator({
   Home: {
     screen: HomeScreen,
-    navigationOptions: { title: 'Home' }
-  }
+    navigationOptions: { 
+      title: 'HOME',
+      headerTintColor: '#C4C4C4',
+      headerTitleStyle: {
+        fontFamily: 'Futura-CondensedMedium',
+        fontSize: 16,
+        fontWeight: '600',
+      },
+    },
+  },
 });
 
 const Discover = createStackNavigator({
   Discover: {
     screen: DiscoverScreen,
-    navigationOptions: { title: 'Discover' }
+    navigationOptions: { 
+      title: 'DISCOVER',
+      headerTintColor: '#C4C4C4',
+      headerTitleStyle: {
+        fontFamily: 'Futura-CondensedMedium',
+        fontSize: 16,
+        fontWeight: '600',
+      }, 
+    }
   }
 });
 
 const Inbox = createStackNavigator({
   Inbox: {
     screen: InboxScreen,
-    navigationOptions: { title: 'Inbox' }
+    navigationOptions: { 
+      title: 'INBOX',
+      headerTintColor: '#C4C4C4',
+      headerTitleStyle: {
+        fontFamily: 'Futura-CondensedMedium',
+        fontSize: 16,
+        fontWeight: '600',
+      },
+    }
   }
 });
 
 const Profile = createStackNavigator({
   Profile: {
     screen: ProfileScreen,
-    navigationOptions: { title: 'Profile' }
+    navigationOptions: { 
+      title: 'PROFILE',
+      headerTintColor: '#C4C4C4',
+      headerTitleStyle: {
+        fontFamily: 'Futura-CondensedMedium',
+        fontSize: 16,
+        fontWeight: '600',
+      },
+    }
   }
 });
 
