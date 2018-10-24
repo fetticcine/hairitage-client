@@ -7,6 +7,8 @@ import colors from '../../assets/colors';
 class BaseButton extends Component {
   render() {
     const {
+      pdgHorizontal,
+      pdgVertical,
       backgroundColor,
       borderColor,
       borderRadius,
@@ -19,6 +21,8 @@ class BaseButton extends Component {
       onPress,
     } = this.props;
 
+    const paddingHorizontal = pdgHorizontal || 20;
+    const paddingVertical = pdgVertical || 5;
     const bgColor = backgroundColor || 'transparent';
     const bdColor = borderColor || colors.lightGrey;
     const bdRadius = borderRadius || 5;
@@ -31,8 +35,8 @@ class BaseButton extends Component {
     return (
       <TouchableOpacity
         style={[{
-          alignSelf, backgroundColor: bgColor, borderColor: bdColor,
-          borderRadius: bdRadius, borderWidth: bdWidth}, styles.buttonStyle]}
+          alignSelf, paddingHorizontal, paddingVertical, backgroundColor: bgColor, 
+          borderColor: bdColor, borderRadius: bdRadius, borderWidth: bdWidth}, styles.buttonStyle]}
         onPress={onPress}
       >
         <Text
@@ -46,6 +50,8 @@ class BaseButton extends Component {
 }
 
 BaseButton.propTypes = {
+  paddingHorizontal: PropTypes.string,
+  paddingVertical: PropTypes.string,
   backgroundColor: PropTypes.string,
   borderColor: PropTypes.string,
   borderRadius: PropTypes.string,
@@ -61,8 +67,6 @@ BaseButton.propTypes = {
 const styles = {
   buttonStyle: {
     justifyContent: 'center',
-    paddingHorizontal: 20,
-    paddingVertical: 5,
   },
   textStyle: {
     fontFamily: 'Futura-CondensedMedium',
@@ -71,3 +75,4 @@ const styles = {
 };
 
 export default BaseButton;
+
