@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, ImageBackground, Text, TouchableOpacity, FlatList } from 'react-native';
-import ApptTicker from './ApptTicker';
 
 import { getGoogleDriveHostUrl } from '../../utils';
 

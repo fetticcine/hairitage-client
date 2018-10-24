@@ -7,6 +7,7 @@ import ApptTicker from './ApptTicker';
 
 const barberOneImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/11FAcxF6wMBaHjtsyWl7d5hKqyN22t_Ds/view?usp=sharing');
 const barberTwoImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/1tzzXQdPG3qKJzWpttCLgVEqWoxnP_Z4L/view?usp=sharing');
+const barberThreeImage = getGoogleDriveHostUrl('https://drive.google.com/file/d/1REdU8QK8TqF9lX8yzqA4nzpa5NUZtETn/view?usp=sharing');
 
 //TODO: create static json file for barber data
 class MyBarbers extends Component {
@@ -57,7 +58,29 @@ class MyBarbers extends Component {
                             textColor="#fff"
                         />
                     </View>
-                </View>      
+                </View>
+
+                <View style={containerStyle}> 
+                    <TouchableOpacity>
+                        <Image style={imageStyle} source={{ uri: barberThreeImage }} />
+                    </TouchableOpacity>
+                    <View>
+                        <TouchableOpacity>
+                            <Text style={nameTextStyle}>ELFRID PAYTON</Text>
+                        </TouchableOpacity>    
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text style={textStyle}>Next available: Fri April 13 at 4:30 pm</Text>
+                        </View>
+                    </View>
+                    <View style={buttonViewStyle}>
+                        <BaseButton
+                            onPress={() => alert('Go to booking flow.')} 
+                            text="BOOK"
+                            backgroundColor="#c4c4c4"
+                            textColor="#fff"
+                        />
+                    </View>
+                </View>
             </View>     
         );
     }
