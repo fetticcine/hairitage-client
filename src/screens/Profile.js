@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+
+import MyProfile from '../components/profile/MyProfile';
 
 export default class Profile extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Profile Screen</Text>
+      <View style={{ backgroundColor: '#fff' }}>
+        <MyProfile />
       </View>
     );
   }
